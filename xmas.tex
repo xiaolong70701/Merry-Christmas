@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amsthm,amssymb}
+
+\usepackage[a4paper,margin=1in,footskip=0.25in]{geometry}
+
+\renewcommand\qedsymbol{\raisebox{-4pt}{\includegraphics[height=10pt]{christmas-tree}}}
+
+%%% FONT SETTING %%%
+\PassOptionsToPackage{no-math}{fontspec}
+\usepackage{xeCJK}
+\setmainfont[Path=./fonts/,
+Numbers = OldStyle,
+ItalicFont={Times New Roman Italic.ttf},
+BoldFont={Times New Roman Bold.ttf},
+BoldItalicFont={Times New Roman Bold Italic.ttf}]{LinLibertine_R.otf} % Set the main font of the document 
+\setCJKmainfont[Path=./fonts/]{cwTeXQMing-Medium.ttf} % set the main Chinese font in the document
+\setCJKfamilyfont{kai}[Path=./fonts/]{cwTeXQKai-Medium.ttf}
+\newcommand{\kai}[1]{{\CJKfamily{kai}#1}}
+\setCJKfamilyfont{yuan}[Path=./fonts/]{cwTeXQYuan-Medium.ttf} % yuan 
+\newcommand{\yuan}[1]{{\CJKfamily{yuan}#1}}
+\setCJKfamilyfont{hei}[Path=./fonts/]{cwTeXQHei-Bold.ttf}
+\newcommand{\hei}[1]{{\CJKfamily{hei}#1}}
+%\newfontfamily\cb{Arial} % add some font family
+
+\usepackage{mathspec}  % Includes amsmath.
+\setmathsfont(Digits)[Numbers=OldStyle]{LinLibertine_R.otf}
+
+\begin{document}
+	\noindent \textbf{Merry Christmas Proof}
+	
+	\begin{proof}
+	Given a function as follow:
+	\[
+	y = \frac{\log_e\left(\frac{x}{m} -sa\right)}{r^2}
+	\]
+	By rearranging the equation, we can obtain:
+		\begin{align*}
+			yr^2 &= \log_e \left(\frac{x}{m} -sa\right)\\
+			e^{yr^2} &= \frac{x}{m} -sa\\
+			me^{yr^2} &= x - msa\\
+			me^{rry} &= x - mas
+		\end{align*}
+	\end{proof}	
+	
+\end{document}
